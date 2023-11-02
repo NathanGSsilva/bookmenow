@@ -6,3 +6,125 @@
     --texto:#4b4b4b;
     --label-categoria:#d9c505;
 }
+
+/* reset de espaçamento do projeto */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* fonte */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* tornando flex, centralizando verticamente e horizontalmente e dando espaçamento entre os menus */
+#cabecalho{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* tornando o menu flex e tirando as bolinhas */
+#menu ul{
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li{
+    padding-left: 20px;
+    padding-right: 20px;        
+}
+
+#menu a{
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.btn-secundario{
+    color:white;    
+    background-color: var(--secundaria);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#banner{
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+/* barra de pesquisa antes do form */
+#fromPesquisa{
+    background-color: white;
+    border-radius: 30px;
+    color:var(--texto);
+    font-size: 1.5em;
+    padding: 5px 250px;
+
+}
+/* barra de pesquisa form */
+#fromPesquisa form{
+    display: flex;
+    align-items: center;
+    
+}
+/* DISTANCIA DO PARAGRAFO "descubra qualidade..." */
+.container p{
+    margin: 10px;
+}
+/* BOTAO PESQUISAR */
+#fromPesquisa form button{
+    background-color: var(--primaria);
+    border-radius: 30px;
+    color:white;
+    padding: 10px 40px;
+    font-weight: 700;
+    border: none;
+}
+/* O QUE ESTA PROCURANDO E LOCALIZAÇÃO */
+#fromPesquisa form input{
+    background-color: white;
+    font-size: 1rem;
+    border: none;
+}
+
+/* TAMANHO DO ICONE */
+#fromPesquisa form i{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* LISTA DE SERVIÇOS */
+.lista-servico-banner ul {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.lista-servico-banner ul li {
+    border-style: dashed;
+    border-radius: 30px;
+    margin: 5px 15px;
+    list-style: none;
+    padding: 3px 10px;
+    font-size: 0.7rem;
+}
+
+.form-icon{
+    
+}
