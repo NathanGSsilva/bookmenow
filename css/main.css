@@ -27,6 +27,7 @@ body{
     align-items: center;    
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 65px;
     
 }
 
@@ -49,6 +50,10 @@ body{
 #menu a{
     color: var(--texto);
     font-weight: 500;
+}
+
+#botao-menu-mobile{
+    display: none;
 }
 
 .btn-secundario{
@@ -74,7 +79,7 @@ body{
     border-radius: 30px;
     color:var(--texto);
     font-size: 1.5em;
-    padding: 5px 250px;
+    padding: 8px;
 
 }
 /* barra de pesquisa form */
@@ -83,10 +88,12 @@ body{
     align-items: center;
     
 }
-/* DISTANCIA DO PARAGRAFO "descubra qualidade..." */
-.container p{
-    margin: 10px;
+
+#banner div p{
+    margin:10px;
 }
+
+
 /* BOTAO PESQUISAR */
 #fromPesquisa form button{
     background-color: var(--primaria);
@@ -110,21 +117,116 @@ body{
 }
 
 /* LISTA DE SERVIÇOS */
-.lista-servico-banner ul {
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-}
-
 .lista-servico-banner ul li {
-    border-style: dashed;
+    margin: 5px;
+    display: inline-block;
+    font-size: 0.8em;
+    border: 2px dotted;
     border-radius: 30px;
-    margin: 5px 15px;
-    list-style: none;
-    padding: 3px 10px;
-    font-size: 0.7rem;
+    padding: 5px 20px;
+    border
 }
 
-.form-icon{
-    
+.secao-titulo{
+    border-left: 5px solid var(--primaria);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo a{
+    color: var(--texto);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* LISTA DE SERVIÇOS */
+
+.lista-card-categorias{
+    display: flex;
+    gap: 40px;
+}
+
+.lista-card-categorias img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.lista-card-categorias div{
+    position: relative;
+}
+
+.lista-card-categorias span{
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: var(--laranja);
+    padding: 0px 20px;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.lista-card-servicos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.lista-card-servicos img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.card-servico{
+    width: calc(33% - 30px);
+}
+
+
+
+
+
+
+
+
+
+/* ESTILO MOBILE */
+
+@media(max-width: 767px){
+
+    #botao-menu-mobile{
+        display: block; /* Mostrar elemento na tela*/
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    #menu{
+        position: absolute;
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        top: 65px;
+        z-index: 999999;
+        box-shadow: 2px 2px 5px #2f2f2f;
+        
+    }
+
+    #menu ul{
+        margin-top: 30px;
+        display: block;
+    }
+
+    #menu li{
+        padding: 10px;
+    }
+
 }
