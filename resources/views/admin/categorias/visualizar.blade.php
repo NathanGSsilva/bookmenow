@@ -1,0 +1,30 @@
+@extends('admin.dashboard')
+
+@section('conteudo')
+    <div class="d-flex justify-content-between mt-3">
+        <h2>Visualizar Categorias</h2>
+    </div>
+
+    <hr>
+
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <td>{{$categoria->id}}</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>{{$categoria->titulo}}</td>
+        </tr>
+        <tr>
+            <th>Imagem</th>
+            <td>{{$categoria->imagem}}</td>
+        </tr>
+        <tr>
+            <th>Descricao</th>
+            <td>{{$categoria->descricao}}</td>
+        </tr>
+    </table>
+    <a href="{{route('categoria.edit', ['id' => $categoria->id])}}" class="btn btn-primary">Editar</a>
+    <a href="{{route('categoria.index')}}" class="btn btn-secondary">Cancelar</a>
+@endsection
